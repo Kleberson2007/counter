@@ -8,7 +8,25 @@
 <body>
     <h1>counter</h1>
     <p id="result">0</p>
-    <button onclick="plusone">1</button> 
-    <butto>+1</button>
+    <button class="botao" onclick="minusone()">-1</button>
+    <button class="botao" onclick="plusone()">+1</button>
 </body>
+<script>
+    let number = 0
+
+    function minusone() {
+        number-- ;
+        showonscreen();
+    }
+
+    function plusone() {
+        number++;
+        showonscreen();
+    }
+
+    function showonscreen() {
+        const p = document.querySelector('#result')
+        p.innerText = number
+    }
+</script>
 </html>
